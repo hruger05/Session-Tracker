@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var firebaseService: FirebaseViewModel
+    @EnvironmentObject var ValVM: ValVM
     var body: some View {
         NavigationStack{
             ZStack{
@@ -21,11 +22,21 @@ struct ContentView: View {
                         .padding(55)
                     
                     NavigationLink(destination: valorantStatsView()) {
-                        Image("Valorant")
+                        Image("valorant")
                             .resizable()
                             .clipShape(RoundedRectangle(cornerRadius: 25.0))
                             .frame(width: 370, height: 100)
                     }
+                    Button(action: {
+                        ValVM.saveToFirebase(ses: valSessionModel(numMatches: 2, matches: [[
+                            "kills" : 2,
+                            "deaths" : 3
+                        ], ["kills" : 30,
+                            "deaths" : 20
+                           ]]))
+                    }, label: {
+                        Text("Button").foregroundStyle(.red)
+                    })
                     Spacer()
                 }
             }
@@ -37,5 +48,6 @@ struct ContentView: View {
 #Preview {
     ContentView()
         .environmentObject(FirebaseViewModel())
+        .environmentObject(ValVM())
 }
 
