@@ -42,10 +42,17 @@ struct ContentView: View {
                     }, label: {
                         Text("Button").foregroundStyle(.red)
                     })
+                    List {
+                        ForEach(ValVM.sessions) { session in
+                            Text("\(session.matches[0]["kills"] ?? "none")")
+                        }
+                    }
                     Spacer()
                 }
             }
             .ignoresSafeArea()
+        }.onAppear {
+            ValVM.observeSessionsFromFirebase()
         }
     }
 }

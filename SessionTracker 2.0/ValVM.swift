@@ -23,4 +23,20 @@ class ValVM: ObservableObject {
         }
         
     }
+    
+    func observeSessionsFromFirebase() {
+        db.collection("Games/Valorant/Sessions").addSnapshotListener { snapshot, error in
+            if let err = error {
+                print("\(err.localizedDescription)")
+                return
+            }
+            self.sessions.removeAll()
+            if let snap = snapshot {
+                for item in snap.documents {
+                    let stat = valSessionModel(data: item.data())
+                    self.sessions.append(stat)
+                }
+            }
+        }
+    }
 }
