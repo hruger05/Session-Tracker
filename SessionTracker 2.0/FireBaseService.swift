@@ -12,7 +12,6 @@ class FirebaseService: ObservableObject {
     
     @Published var gameStats: [GameStat] = []
     
-    
     var totalWins: Int {
         var result = 0
         for game in gameStats {

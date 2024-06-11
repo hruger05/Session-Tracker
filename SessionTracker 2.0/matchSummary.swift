@@ -148,8 +148,11 @@ struct matchSummary: View {
                         dismiss()
                     }, label: {
                         Text("Submit Match")
+                            .foregroundStyle(Color.blue)
+                            .font(.title2)
+                            .padding(10)
+                            .background(RoundedRectangle(cornerRadius: 20.0))
                             .foregroundStyle(Color.white)
-                            .font(.system(size: 30))
                     })
                 }
             }
