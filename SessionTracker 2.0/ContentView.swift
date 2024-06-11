@@ -28,12 +28,17 @@ struct ContentView: View {
                             .frame(width: 370, height: 100)
                     }
                     Button(action: {
-                        ValVM.saveToFirebase(ses: valSessionModel(numMatches: 2, matches: [[
+                        ValVM.saveToFirebase(ses: valSessionModel(numMatches: 2, matches: [
+                            [
                             "kills" : 2,
                             "deaths" : 3
-                        ], ["kills" : 30,
+                            ],
+                            [
+                            "kills" : 30,
                             "deaths" : 20
-                           ]]))
+                            ]
+                            ])
+                        )
                     }, label: {
                         Text("Button").foregroundStyle(.red)
                     })
