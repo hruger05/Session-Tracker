@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7A552A732C10918C0062E621 /* FireBaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A552A722C10918C0062E621 /* FireBaseService.swift */; };
+		7A552A732C10918C0062E621 /* FireBaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A552A722C10918C0062E621 /* FireBaseViewModel.swift */; };
 		7A8EDCF02BFEB7D100FB615A /* SessionTracker_2_0App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8EDCEF2BFEB7D100FB615A /* SessionTracker_2_0App.swift */; };
 		7A8EDCF22BFEB7D100FB615A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8EDCF12BFEB7D100FB615A /* ContentView.swift */; };
 		7A8EDCF42BFEB7D300FB615A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A8EDCF32BFEB7D300FB615A /* Assets.xcassets */; };
@@ -15,9 +15,9 @@
 		7A8EDD012BFEB7D300FB615A /* SessionTracker_2_0Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8EDD002BFEB7D300FB615A /* SessionTracker_2_0Tests.swift */; };
 		7A8EDD0B2BFEB7D300FB615A /* SessionTracker_2_0UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8EDD0A2BFEB7D300FB615A /* SessionTracker_2_0UITests.swift */; };
 		7A8EDD0D2BFEB7D300FB615A /* SessionTracker_2_0UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8EDD0C2BFEB7D300FB615A /* SessionTracker_2_0UITestsLaunchTests.swift */; };
-		7A8EDD1A2BFEB9CE00FB615A /* GameStat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8EDD192BFEB9CE00FB615A /* GameStat.swift */; };
-		7A8EDD242BFEBDD500FB615A /* sessionStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8EDD232BFEBDD500FB615A /* sessionStats.swift */; };
-		7A8EDD6A2C0753AB00FB615A /* matchSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8EDD692C0753AB00FB615A /* matchSummary.swift */; };
+		7A8EDD1A2BFEB9CE00FB615A /* valorantGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8EDD192BFEB9CE00FB615A /* valorantGameModel.swift */; };
+		7A8EDD242BFEBDD500FB615A /* valorantStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8EDD232BFEBDD500FB615A /* valorantStatsView.swift */; };
+		7A8EDD6A2C0753AB00FB615A /* valorantSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8EDD692C0753AB00FB615A /* valorantSummaryView.swift */; };
 		7A8EDD6C2C07557300FB615A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A8EDD6B2C07557300FB615A /* GoogleService-Info.plist */; };
 		7A8EDD6D2C07557300FB615A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A8EDD6B2C07557300FB615A /* GoogleService-Info.plist */; };
 		7A8EDD6E2C07557300FB615A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A8EDD6B2C07557300FB615A /* GoogleService-Info.plist */; };
@@ -49,7 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		7A552A722C10918C0062E621 /* FireBaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseService.swift; sourceTree = "<group>"; };
+		7A552A722C10918C0062E621 /* FireBaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseViewModel.swift; sourceTree = "<group>"; };
 		7A8EDCEC2BFEB7D100FB615A /* SessionTracker 2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SessionTracker 2.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A8EDCEF2BFEB7D100FB615A /* SessionTracker_2_0App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionTracker_2_0App.swift; sourceTree = "<group>"; };
 		7A8EDCF12BFEB7D100FB615A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -60,9 +60,9 @@
 		7A8EDD062BFEB7D300FB615A /* SessionTracker 2.0UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SessionTracker 2.0UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A8EDD0A2BFEB7D300FB615A /* SessionTracker_2_0UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionTracker_2_0UITests.swift; sourceTree = "<group>"; };
 		7A8EDD0C2BFEB7D300FB615A /* SessionTracker_2_0UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionTracker_2_0UITestsLaunchTests.swift; sourceTree = "<group>"; };
-		7A8EDD192BFEB9CE00FB615A /* GameStat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStat.swift; sourceTree = "<group>"; };
-		7A8EDD232BFEBDD500FB615A /* sessionStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sessionStats.swift; sourceTree = "<group>"; };
-		7A8EDD692C0753AB00FB615A /* matchSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = matchSummary.swift; sourceTree = "<group>"; };
+		7A8EDD192BFEB9CE00FB615A /* valorantGameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = valorantGameModel.swift; sourceTree = "<group>"; };
+		7A8EDD232BFEBDD500FB615A /* valorantStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = valorantStatsView.swift; sourceTree = "<group>"; };
+		7A8EDD692C0753AB00FB615A /* valorantSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = valorantSummaryView.swift; sourceTree = "<group>"; };
 		7A8EDD6B2C07557300FB615A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -124,10 +124,10 @@
 			children = (
 				7A8EDCEF2BFEB7D100FB615A /* SessionTracker_2_0App.swift */,
 				7A8EDCF12BFEB7D100FB615A /* ContentView.swift */,
-				7A8EDD232BFEBDD500FB615A /* sessionStats.swift */,
-				7A8EDD692C0753AB00FB615A /* matchSummary.swift */,
-				7A8EDD192BFEB9CE00FB615A /* GameStat.swift */,
-				7A552A722C10918C0062E621 /* FireBaseService.swift */,
+				7A8EDD232BFEBDD500FB615A /* valorantStatsView.swift */,
+				7A8EDD692C0753AB00FB615A /* valorantSummaryView.swift */,
+				7A8EDD192BFEB9CE00FB615A /* valorantGameModel.swift */,
+				7A552A722C10918C0062E621 /* FireBaseViewModel.swift */,
 				7A8EDCF32BFEB7D300FB615A /* Assets.xcassets */,
 				7A8EDD6B2C07557300FB615A /* GoogleService-Info.plist */,
 				7A8EDCF52BFEB7D300FB615A /* Preview Content */,
@@ -306,11 +306,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A552A732C10918C0062E621 /* FireBaseService.swift in Sources */,
-				7A8EDD242BFEBDD500FB615A /* sessionStats.swift in Sources */,
-				7A8EDD1A2BFEB9CE00FB615A /* GameStat.swift in Sources */,
+				7A552A732C10918C0062E621 /* FireBaseViewModel.swift in Sources */,
+				7A8EDD242BFEBDD500FB615A /* valorantStatsView.swift in Sources */,
+				7A8EDD1A2BFEB9CE00FB615A /* valorantGameModel.swift in Sources */,
 				7A8EDCF22BFEB7D100FB615A /* ContentView.swift in Sources */,
-				7A8EDD6A2C0753AB00FB615A /* matchSummary.swift in Sources */,
+				7A8EDD6A2C0753AB00FB615A /* valorantSummaryView.swift in Sources */,
 				7A8EDCF02BFEB7D100FB615A /* SessionTracker_2_0App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

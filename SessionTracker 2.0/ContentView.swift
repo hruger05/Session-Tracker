@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @EnvironmentObject var firebaseService: FirebaseService
+    @EnvironmentObject var firebaseService: FirebaseViewModel
     var body: some View {
         NavigationStack{
             ZStack{
@@ -20,7 +20,7 @@ struct ContentView: View {
                         .foregroundStyle(Color.white)
                         .padding(55)
                     
-                    NavigationLink(destination: sessionStats()) {
+                    NavigationLink(destination: valorantStatsView()) {
                         Image("Valorant")
                             .resizable()
                             .clipShape(RoundedRectangle(cornerRadius: 25.0))
@@ -36,6 +36,6 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
-        .environmentObject(FirebaseService())
+        .environmentObject(FirebaseViewModel())
 }
 

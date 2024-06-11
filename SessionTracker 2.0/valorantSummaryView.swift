@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct matchSummary: View {
+struct valorantSummaryView: View {
     @Environment(\.dismiss) private var dismiss
     // win and lose variables
     @State var win = 0
@@ -40,7 +40,7 @@ struct matchSummary: View {
     @State var ACS = 0
     @State var bindACS = 0
 //    @StateObject var firebaseService = FirebaseService()
-    @EnvironmentObject var firebaseService: FirebaseService
+    @EnvironmentObject var firebaseService: FirebaseViewModel
     
     var body: some View {
             ZStack{
@@ -143,7 +143,7 @@ struct matchSummary: View {
                         .frame(width: 150)
                     
                     Button(action: {
-                        let newStat = GameStat(didWin: didWin, kills: kills, deaths: deaths, ACS: ACS, roundsLost: roundsLost, roundsWon: roundsWon)
+                        let newStat = valorantGameModel(didWin: didWin, kills: kills, deaths: deaths, ACS: ACS, roundsLost: roundsLost, roundsWon: roundsWon)
                         firebaseService.saveGameStatToFirebase(gameStat: newStat)
                         dismiss()
                     }, label: {
@@ -178,12 +178,12 @@ struct matchSummary: View {
 //                                }))
     }
         func forTrailingZero(_ temp: Double) -> String {
-            var tempVar = String(format: "%g", temp)
+            let tempVar = String(format: "%g", temp)
             return tempVar
         }
     }
 
 #Preview {
-    matchSummary()
-        .environmentObject(FirebaseService())
+    valorantSummaryView()
+        .environmentObject(FirebaseViewModel())
 }

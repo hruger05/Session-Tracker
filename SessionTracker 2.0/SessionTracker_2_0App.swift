@@ -32,7 +32,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 struct SessionTracker: App {
   // register app delegate for Firebase setup
   @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-    @StateObject var service: FirebaseService = FirebaseService()
+    @StateObject var service: FirebaseViewModel = FirebaseViewModel()
 
   var body: some Scene {
     WindowGroup {

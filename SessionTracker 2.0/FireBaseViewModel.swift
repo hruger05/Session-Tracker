@@ -8,9 +8,9 @@
 import Foundation
 import Firebase
 
-class FirebaseService: ObservableObject {
+class FirebaseViewModel: ObservableObject {
     
-    @Published var gameStats: [GameStat] = []
+    @Published var gameStats: [valorantGameModel] = []
     
     var totalWins: Int {
         var result = 0
@@ -90,13 +90,13 @@ class FirebaseService: ObservableObject {
             self.gameStats.removeAll()
             if let snap = snapshot {
                 for item in snap.documents {
-                    let stat = GameStat(data: item.data())
+                    let stat = valorantGameModel(data: item.data())
                     self.gameStats.append(stat)
                 }
             }
         }
     }
-    func saveGameStatToFirebase(gameStat: GameStat) {
+    func saveGameStatToFirebase(gameStat: valorantGameModel) {
         db.collection("valorant").document(gameStat.id).setData(gameStat.toDictionaryValue()) {
             error in
             if let err = error {

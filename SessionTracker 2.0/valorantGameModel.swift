@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-class GameStat: Identifiable, Codable, ObservableObject {
+class valorantGameModel: Identifiable, Codable, ObservableObject {
     var didWin:Bool
     var kills:Double
     var deaths:Double

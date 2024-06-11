@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct sessionStats: View {
-    @EnvironmentObject var firebaseService: FirebaseService
+struct valorantStatsView: View {
+    @EnvironmentObject var firebaseService: FirebaseViewModel
     var body: some View {
         NavigationStack{
             ZStack{
@@ -80,7 +80,7 @@ struct sessionStats: View {
                         }
                     }
                     .listStyle(.plain)
-                    NavigationLink(destination: matchSummary()) {
+                    NavigationLink(destination: valorantSummaryView()) {
                         Text("Record Match")
                             .foregroundStyle(Color.blue)
                             .font(.title2)
@@ -104,8 +104,8 @@ struct sessionStats: View {
 }
 
 #Preview {
-    sessionStats()
-        .environmentObject(FirebaseService())
+    valorantStatsView()
+        .environmentObject(FirebaseViewModel())
 }
 
 
