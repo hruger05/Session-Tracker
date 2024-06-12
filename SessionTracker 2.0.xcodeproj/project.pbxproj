@@ -32,6 +32,8 @@
 		7A8EDD7B2C07560700FB615A /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7A8EDD7A2C07560700FB615A /* FirebaseFirestoreSwift */; };
 		7A8EDD7D2C07560700FB615A /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 7A8EDD7C2C07560700FB615A /* FirebaseStorage */; };
 		7A8EDD7F2C07560700FB615A /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 7A8EDD7E2C07560700FB615A /* FirebaseStorageCombine-Community */; };
+		7A91F24C2C19273C00EA7913 /* valorantSessionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A91F24B2C19273C00EA7913 /* valorantSessionsView.swift */; };
+		7A91F24E2C19277800EA7913 /* valorantIndividualSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A91F24D2C19277700EA7913 /* valorantIndividualSessionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,8 @@
 		7A8EDD232BFEBDD500FB615A /* valorantStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = valorantStatsView.swift; sourceTree = "<group>"; };
 		7A8EDD692C0753AB00FB615A /* valorantSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = valorantSummaryView.swift; sourceTree = "<group>"; };
 		7A8EDD6B2C07557300FB615A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7A91F24B2C19273C00EA7913 /* valorantSessionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = valorantSessionsView.swift; sourceTree = "<group>"; };
+		7A91F24D2C19277700EA7913 /* valorantIndividualSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = valorantIndividualSessionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +133,8 @@
 			children = (
 				7A8EDD692C0753AB00FB615A /* valorantSummaryView.swift */,
 				7A8EDD232BFEBDD500FB615A /* valorantStatsView.swift */,
+				7A91F24B2C19273C00EA7913 /* valorantSessionsView.swift */,
+				7A91F24D2C19277700EA7913 /* valorantIndividualSessionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -351,6 +357,8 @@
 				214A6AF62C1910DC00E53027 /* valSessionModel.swift in Sources */,
 				7A552A732C10918C0062E621 /* FireBaseViewModel.swift in Sources */,
 				7A8EDD242BFEBDD500FB615A /* valorantStatsView.swift in Sources */,
+				7A91F24E2C19277800EA7913 /* valorantIndividualSessionView.swift in Sources */,
+				7A91F24C2C19273C00EA7913 /* valorantSessionsView.swift in Sources */,
 				7A8EDD1A2BFEB9CE00FB615A /* valorantGameModel.swift in Sources */,
 				214A6AF82C1912CE00E53027 /* ValVM.swift in Sources */,
 				7A8EDCF22BFEB7D100FB615A /* ContentView.swift in Sources */,

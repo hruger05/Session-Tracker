@@ -45,7 +45,7 @@ struct valorantSummaryView: View {
     var body: some View {
             ZStack{
                 
-                Color.blue
+                Color.indigo
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                 
                 VStack {

@@ -13,7 +13,7 @@ struct valorantStatsView: View {
         NavigationStack{
             ZStack{
                 
-                Color.blue
+                Color.indigo
                 
                 VStack {
                     Text("Valorant Session Tracker")
