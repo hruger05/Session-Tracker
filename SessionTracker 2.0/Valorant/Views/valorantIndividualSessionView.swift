@@ -14,7 +14,13 @@ struct valorantIndividualSessionView: View {
     var body: some View {
         NavigationStack{
             VStack{
-                Text("\(session.matches)")
+                Text("Total Kills: \(session.totalkills)")
+                Text("Total Deaths: \(session.totaldeaths)")
+                Text("Total ACS: \(session.totalACS)")
+                Text("Total Rounds Won: \(session.totalRoundsWon)")
+                Text("Total Rounds Lost: \(session.totalRoundsLost)")
+                Text("Total Assists: \(session.totalAssists)")
+                Text("Total wins: \(session.totalWins)")
             }
         }
     }

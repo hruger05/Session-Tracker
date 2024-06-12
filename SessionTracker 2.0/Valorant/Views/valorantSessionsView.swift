@@ -30,7 +30,9 @@ struct valorantSessionsView: View {
                 VStack{
                     List {
                         ForEach(valVM.sessions) { session in
-                            Text("\(totalKills)")
+                            NavigationLink(destination: valorantIndividualSessionView(session: session)) {
+                                Text("\(session.id)")
+                            }
                         }
                     }
                 }
