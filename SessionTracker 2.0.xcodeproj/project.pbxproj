@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		214A6AF62C1910DC00E53027 /* valSessionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214A6AF52C1910DC00E53027 /* valSessionModel.swift */; };
 		214A6AF82C1912CE00E53027 /* ValVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214A6AF72C1912CE00E53027 /* ValVM.swift */; };
-		214A6AFA2C191BDF00E53027 /* matchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214A6AF92C191BDF00E53027 /* matchModel.swift */; };
+		214A6AFA2C191BDF00E53027 /* valMatchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214A6AF92C191BDF00E53027 /* valMatchModel.swift */; };
 		7A552A732C10918C0062E621 /* FireBaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A552A722C10918C0062E621 /* FireBaseViewModel.swift */; };
 		7A8EDCF02BFEB7D100FB615A /* SessionTracker_2_0App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8EDCEF2BFEB7D100FB615A /* SessionTracker_2_0App.swift */; };
 		7A8EDCF22BFEB7D100FB615A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8EDCF12BFEB7D100FB615A /* ContentView.swift */; };
@@ -54,7 +54,7 @@
 /* Begin PBXFileReference section */
 		214A6AF52C1910DC00E53027 /* valSessionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = valSessionModel.swift; sourceTree = "<group>"; };
 		214A6AF72C1912CE00E53027 /* ValVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValVM.swift; sourceTree = "<group>"; };
-		214A6AF92C191BDF00E53027 /* matchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = matchModel.swift; sourceTree = "<group>"; };
+		214A6AF92C191BDF00E53027 /* valMatchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = valMatchModel.swift; sourceTree = "<group>"; };
 		7A552A722C10918C0062E621 /* FireBaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseViewModel.swift; sourceTree = "<group>"; };
 		7A8EDCEC2BFEB7D100FB615A /* SessionTracker 2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SessionTracker 2.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A8EDCEF2BFEB7D100FB615A /* SessionTracker_2_0App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionTracker_2_0App.swift; sourceTree = "<group>"; };
@@ -105,6 +105,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		214A6AFB2C1921A900E53027 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				7A552A722C10918C0062E621 /* FireBaseViewModel.swift */,
+				214A6AF72C1912CE00E53027 /* ValVM.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		214A6AFC2C1921B500E53027 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7A8EDD192BFEB9CE00FB615A /* valorantGameModel.swift */,
+				214A6AF92C191BDF00E53027 /* valMatchModel.swift */,
+				214A6AF52C1910DC00E53027 /* valSessionModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		214A6AFD2C1921BD00E53027 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7A8EDD692C0753AB00FB615A /* valorantSummaryView.swift */,
+				7A8EDD232BFEBDD500FB615A /* valorantStatsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		214A6AFE2C1921EE00E53027 /* Valorant */ = {
+			isa = PBXGroup;
+			children = (
+				214A6AFC2C1921B500E53027 /* Models */,
+				214A6AFB2C1921A900E53027 /* ViewModels */,
+				214A6AFD2C1921BD00E53027 /* Views */,
+			);
+			path = Valorant;
+			sourceTree = "<group>";
+		};
 		7A8EDCE32BFEB7D100FB615A = {
 			isa = PBXGroup;
 			children = (
@@ -130,13 +168,7 @@
 			children = (
 				7A8EDCEF2BFEB7D100FB615A /* SessionTracker_2_0App.swift */,
 				7A8EDCF12BFEB7D100FB615A /* ContentView.swift */,
-				214A6AF52C1910DC00E53027 /* valSessionModel.swift */,
-				214A6AF92C191BDF00E53027 /* matchModel.swift */,
-				214A6AF72C1912CE00E53027 /* ValVM.swift */,
-				7A552A722C10918C0062E621 /* FireBaseViewModel.swift */,
-				7A8EDD192BFEB9CE00FB615A /* valorantGameModel.swift */,
-				7A8EDD232BFEBDD500FB615A /* valorantStatsView.swift */,
-				7A8EDD692C0753AB00FB615A /* valorantSummaryView.swift */,
+				214A6AFE2C1921EE00E53027 /* Valorant */,
 				7A8EDCF32BFEB7D300FB615A /* Assets.xcassets */,
 				7A8EDD6B2C07557300FB615A /* GoogleService-Info.plist */,
 				7A8EDCF52BFEB7D300FB615A /* Preview Content */,
@@ -315,7 +347,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				214A6AFA2C191BDF00E53027 /* matchModel.swift in Sources */,
+				214A6AFA2C191BDF00E53027 /* valMatchModel.swift in Sources */,
 				214A6AF62C1910DC00E53027 /* valSessionModel.swift in Sources */,
 				7A552A732C10918C0062E621 /* FireBaseViewModel.swift in Sources */,
 				7A8EDD242BFEBDD500FB615A /* valorantStatsView.swift in Sources */,
