@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @EnvironmentObject var firebaseService: FirebaseViewModel
     @EnvironmentObject var ValVM: ValVM
+    @StateObject var matchVM: matchModel = matchModel()
     var body: some View {
         NavigationStack{
             ZStack{
@@ -29,14 +30,8 @@ struct ContentView: View {
                     }
                     Button(action: {
                         ValVM.saveToFirebase(ses: valSessionModel(numMatches: 2, matches: [
-                            [
-                            "kills" : 2,
-                            "deaths" : 3
-                            ],
-                            [
-                            "kills" : 30,
-                            "deaths" : 20
-                            ]
+                            matchVM.makeModel(kills: 25, deaths: 14, win: true, assists: 5, ACS: 200, roundsWon: 13, roundsLost: 8),
+                            matchVM.makeModel(kills: 22, deaths: 17, win: true, assists: 7, ACS: 176, roundsWon: 13, roundsLost: 10)
                             ])
                         )
                     }, label: {
@@ -44,7 +39,10 @@ struct ContentView: View {
                     })
                     List {
                         ForEach(ValVM.sessions) { session in
-                            Text("\(session.matches[0]["kills"] ?? "none")")
+                            
+                            ForEach(session.matches.indices) { match in
+                                Text("\(session.matches[match])")
+                            }
                         }
                     }
                     Spacer()
