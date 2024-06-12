@@ -41,7 +41,7 @@ struct ContentView: View {
                         ForEach(ValVM.sessions) { session in
                             
                             ForEach(session.matches.indices) { match in
-                                Text("\(session.matches[match])")
+                                Text("\(session.matches[match]["ACS"] ?? "none")")
                             }
                         }
                     }
