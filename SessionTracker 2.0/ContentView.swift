@@ -10,7 +10,7 @@ import Firebase
 
 struct ContentView: View {
     @EnvironmentObject var ValVM: ValVM
-    @StateObject var matchVM: matchModel = matchModel()
+    @StateObject var matchVM: valMatchModel = valMatchModel()
     var body: some View {
         NavigationStack{
             ZStack{
