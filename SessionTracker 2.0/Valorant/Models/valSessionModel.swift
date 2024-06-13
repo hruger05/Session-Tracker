@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Firebase
 
 class valSessionModel: ObservableObject, Identifiable {
     
@@ -14,6 +15,8 @@ class valSessionModel: ObservableObject, Identifiable {
     var matches: [[String : Any]]
     
     var id: String = UUID().uuidString
+    
+    var created: Timestamp
     
     var totalkills: Int {
         var kills = 0
@@ -71,22 +74,25 @@ class valSessionModel: ObservableObject, Identifiable {
         return wins
     }
     
-    init(numMatches: Int, matches: [[String : Any]]) {
+    init(numMatches: Int, matches: [[String : Any]], created: Timestamp = Timestamp()) {
         self.numMatches = numMatches
         self.matches = matches
+        self.created = created
     }
     
     init(data: [String : Any]) {
         self.numMatches = data["numMatches"] as? Int ?? -1
         self.matches = data["matches"] as? [[String : Any]] ?? [["none" : "none"]]
         self.id = data["id"] as? String ?? "NO_ID"
+        self.created = data["created"] as? Timestamp ?? Timestamp(date: Date(timeIntervalSince1970: TimeInterval()))
     }
     
     func toDictionaryValues() -> [String : Any] {
         return [
             "numMatches" : self.numMatches,
             "matches" : self.matches,
-            "id" : self.id
+            "id" : self.id,
+            "created" : self.created
         ]
         
     }
