@@ -9,7 +9,6 @@ import SwiftUI
 import Firebase
 
 struct ContentView: View {
-    @EnvironmentObject var firebaseService: FirebaseViewModel
     @EnvironmentObject var ValVM: ValVM
     @StateObject var matchVM: matchModel = matchModel()
     var body: some View {
@@ -65,7 +64,6 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
-        .environmentObject(FirebaseViewModel())
         .environmentObject(ValVM())
 }
 
