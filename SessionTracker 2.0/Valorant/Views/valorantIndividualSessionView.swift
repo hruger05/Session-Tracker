@@ -21,6 +21,7 @@ struct valorantIndividualSessionView: View {
                 Text("Total Rounds Lost: \(session.totalRoundsLost)")
                 Text("Total Assists: \(session.totalAssists)")
                 Text("Total wins: \(session.totalWins)")
+                Text("Created: \(session.created.dateValue())")
             }
         }
     }
