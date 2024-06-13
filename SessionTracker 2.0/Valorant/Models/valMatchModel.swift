@@ -9,7 +9,7 @@ import Foundation
 import Firebase
 
 
-class matchModel: ObservableObject {
+class valMatchModel: ObservableObject {
     var kills: Int
     
     var deaths: Int
