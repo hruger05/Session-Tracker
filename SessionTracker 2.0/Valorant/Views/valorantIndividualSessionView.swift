@@ -13,16 +13,30 @@ struct valorantIndividualSessionView: View {
     
     var body: some View {
         NavigationStack{
-            VStack{
-                Text("Total Kills: \(session.totalkills)")
-                Text("Total Deaths: \(session.totaldeaths)")
-                Text("Total ACS: \(session.totalACS)")
-                Text("Total Rounds Won: \(session.totalRoundsWon)")
-                Text("Total Rounds Lost: \(session.totalRoundsLost)")
-                Text("Total Assists: \(session.totalAssists)")
-                Text("Total wins: \(session.totalWins)")
-                Text("Created: \(session.created.dateValue())")
+            ZStack{
+                Color.indigo
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                VStack{
+                    HStack{
+                        Text("Total Kills: \(session.totalkills)")
+                        
+                        Text("Total Deaths: \(session.totaldeaths)")
+                    }
+                    Text("Total Assists: \(session.totalAssists)")
+                    HStack{
+                        Text("Total Rounds Won: \(session.totalRoundsWon)")
+                        
+                        Text("Total Rounds Lost: \(session.totalRoundsLost)")
+                    }
+                    Text("Total wins: \(session.totalWins)")
+                    
+                    Text("Total ACS: \(session.totalACS)")
+                    
+                    Text("Created: \(session.created.dateValue())")
+                }
+                .foregroundStyle(Color.white)
             }
+            .ignoresSafeArea()
         }
     }
 }

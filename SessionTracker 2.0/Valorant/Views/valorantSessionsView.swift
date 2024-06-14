@@ -26,21 +26,31 @@ struct valorantSessionsView: View {
             ZStack{
                 
                 Color.indigo
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
                 
                 VStack{
+                    Text("Valorant Session Stats")
+                        .padding(.top, 50)
+                        .font(.largeTitle)
+                        .foregroundStyle(Color.white)
                     List {
                         ForEach(valVM.sessions) { session in
                             NavigationLink(destination: valorantIndividualSessionView(session: session)) {
-                                Text("\(session.id)")
+                                Text("\(session.totalkills) / \(session.totaldeaths) / \(session.totalAssists)")
+                                    .font(.title3)
                             }
                         }
                     }
+                    .listStyle(.plain)
+                    .padding()
                 }
                 .onAppear {
                     valVM.observeSessionsFromFirebase()
                 }
             }
+            .ignoresSafeArea()
         }
+
     }
 }
 

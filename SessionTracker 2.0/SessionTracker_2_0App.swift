@@ -39,7 +39,7 @@ struct SessionTracker: App {
         ContentView()
               
       }
-      .environmentObject(service)
+      .environmentObject(ValVM())
     }
   }
 }
